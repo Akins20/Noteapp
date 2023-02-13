@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Notepad-App</title>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js"></script>
+    </head>
+
+    <body>
+        <h1>Notepad App</h1>
+        <div class="sidenav" id="mySideNav">
+            <span class="closebtn" onclick="closenav()">&times</span>
+            <h2>Notepad</h2>
+            <p class="newNote" onclick="show()">New Note</p>
+            <p class="history" onclick="viewHistory()">History</p>
+            <p class="Dhistory" onclick="viewOldHistory()">Deleted History</p>
+        </div>
+        <span style="font-size:30px;cursor:pointer; float: left;margin-top:-45px;" onclick="openNav()">&#9776;
+            Open</span>
+        <div class="container">
+            <button class="btn creator" id="creator" onclick="create()">Create a New Note</button>
+            <div class="note" id="note">
+                <span style="float: right; margin-right: 10px; font-weight: 700; font-size: 36px;"
+                    onclick="times()">&times;</span>
+                <label class="note-title">Enter your title</label>
+                <input type="text" id="title" placeholder="Enter title here"><br>
+                <label><b>Enter your Note here</b></label><br>
+                <textarea id="content" rows="10" cols="40" placeholder="Enter notes here"></textarea><br>
+                <button class="btn" onclick="save()">Save Note</button><br>
+                <input type="text" id="rem" placeholder="Enter title to remove from history"><br>
+                <button class="btn" onclick="clearHistory()">Clear Records</button><br>
+            </div>
+            <div id="retrieveRecords" class="records">
+                <label>Retrieve past information:</label><br>
+                <input type="text" id="retrievekey" placeholder="Enter title to view here"><br>
+                <button class="btn" onclick="view()">View Past Records</button>
+                <button class="btn" onclick="clearAll()">Clear all Records</button><br>
+            </div>
+            <div class="delt" id="deleted">
+                <label>Deleted Notes: </label>
+            </div>
+        </div>
+    </body>
+
+</html>
